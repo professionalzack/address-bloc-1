@@ -155,7 +155,7 @@ class MenuController
   end
 
   def delete_entry(entry)
-    address_book.entries.delete(entry)
+    entry.destroy
     puts "#{entry.name} has been deleted"
   end
 
@@ -178,7 +178,7 @@ class MenuController
   end
 
   def search_submenu(entry)
-    puts "\nd - delete entry"
+    puts "d - delete entry"
     puts "e - edit this entry"
     puts "m - return to main menu"
     selection = gets.chomp
